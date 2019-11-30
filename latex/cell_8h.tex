@@ -1,0 +1,342 @@
+\hypertarget{cell_8h}{\section{include/cell.h File Reference}
+\label{cell_8h}\index{include/cell.\-h@{include/cell.\-h}}
+}
+
+
+Definition of the problem, the population and cells.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$error.\-h$>$}\\*
+Include dependency graph for cell.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cell_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{cell_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcoordinate}{coordinate}
+\item 
+struct \hyperlink{structcell}{cell}
+\item 
+struct \hyperlink{structproblem}{problem}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{cell_8h_ac0e5b7b5b4d698de3f31f6644ca0a94e}{typedef struct \hyperlink{structcoordinate}{coordinate} \hyperlink{cell_8h_ac0e5b7b5b4d698de3f31f6644ca0a94e}{coordinate}}\label{cell_8h_ac0e5b7b5b4d698de3f31f6644ca0a94e}
+
+\begin{DoxyCompactList}\small\item\em A structure representing the coordinate of a point in a plane. \end{DoxyCompactList}\item 
+\hypertarget{cell_8h_aec1b5e3c3df16427325defaffcb3cb2e}{typedef struct \hyperlink{structcell}{cell} \hyperlink{cell_8h_aec1b5e3c3df16427325defaffcb3cb2e}{cell}}\label{cell_8h_aec1b5e3c3df16427325defaffcb3cb2e}
+
+\begin{DoxyCompactList}\small\item\em A structure representing a cell. \end{DoxyCompactList}\item 
+\hypertarget{cell_8h_a9b7e2581d2e2f2fc3d141d599d3b11e3}{typedef struct \hyperlink{structcell}{cell} $\ast$ \hyperlink{cell_8h_a9b7e2581d2e2f2fc3d141d599d3b11e3}{population}}\label{cell_8h_a9b7e2581d2e2f2fc3d141d599d3b11e3}
+
+\begin{DoxyCompactList}\small\item\em A structure representing a population. \end{DoxyCompactList}\item 
+\hypertarget{cell_8h_a8f761a52800d0c65186c16662a1197a7}{typedef struct \hyperlink{structproblem}{problem} \hyperlink{cell_8h_a8f761a52800d0c65186c16662a1197a7}{problem}}\label{cell_8h_a8f761a52800d0c65186c16662a1197a7}
+
+\begin{DoxyCompactList}\small\item\em A structure representing a problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{cell_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} \{ {\bfseries A\-L\-I\-V\-E}, 
+{\bfseries N\-E\-W\-B\-O\-R\-N}, 
+{\bfseries D\-Y\-I\-N\-G}
+ \}
+\begin{DoxyCompactList}\small\item\em An enumeration which contains the different possible status of a cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{cell_8h_a9b2a7ea0c749e21682f08bf8099b73b7}{iindex} (int index)
+\begin{DoxyCompactList}\small\item\em Return the reciprocal index of two neighbouring cells. \end{DoxyCompactList}\item 
+\hyperlink{cell_8h_a9b7e2581d2e2f2fc3d141d599d3b11e3}{population} \hyperlink{cell_8h_ad85e7100d3e86c427851f8b27e303aa5}{nil} (void)
+\begin{DoxyCompactList}\small\item\em Return an empty population. \end{DoxyCompactList}\item 
+void \hyperlink{cell_8h_a779fb98cabdc5e91d776de8c195d8169}{add\-\_\-cell} (\hyperlink{structproblem}{problem} $\ast$p\-\_\-prob, \hyperlink{structcoordinate}{coordinate} coord, \hyperlink{cell_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status} stat)
+\begin{DoxyCompactList}\small\item\em Add a cell to a population. \end{DoxyCompactList}\item 
+void \hyperlink{cell_8h_af601d4688b7489ae7753bd45f61e0b24}{remove\-\_\-cell} (\hyperlink{structproblem}{problem} $\ast$p\-\_\-prob, \hyperlink{structcoordinate}{coordinate} coord)
+\begin{DoxyCompactList}\small\item\em Remove a cell from a population. \end{DoxyCompactList}\item 
+bool \hyperlink{cell_8h_aaa4216c60537c08296db2da595b47b2d}{is\-\_\-neighbor} (\hyperlink{structproblem}{problem} $\ast$p\-\_\-prob, \hyperlink{structcoordinate}{coordinate} coord1, \hyperlink{structcoordinate}{coordinate} coord2)
+\begin{DoxyCompactList}\small\item\em Enables to know if two cells are neighbor considering their coordinates. \end{DoxyCompactList}\item 
+\hyperlink{structcoordinate}{coordinate} \hyperlink{cell_8h_a736e96dec4f5a5abf45dd11b5789c202}{neighbor} (\hyperlink{structproblem}{problem} $\ast$p\-\_\-prob, \hyperlink{structcell}{cell} $\ast$p\-\_\-cell, int index)
+\begin{DoxyCompactList}\small\item\em Enables to know the coordinates of the neighbor of index i of a cell considering the edges of the game. \end{DoxyCompactList}\item 
+\hyperlink{structcell}{cell} $\ast$ \hyperlink{cell_8h_aa8682a66e00f6057274d888f4f88731b}{find\-\_\-cell} (\hyperlink{structproblem}{problem} $\ast$p\-\_\-prob, \hyperlink{structcoordinate}{coordinate} coord)
+\begin{DoxyCompactList}\small\item\em Find a cell in a population. \end{DoxyCompactList}\item 
+void \hyperlink{cell_8h_a0e6598e1dcfe64bd21d1fd4c3873eba2}{next\-\_\-generation} (\hyperlink{structproblem}{problem} $\ast$p\-\_\-prob)
+\begin{DoxyCompactList}\small\item\em Update the population to the population's next generation. \end{DoxyCompactList}\item 
+void \hyperlink{cell_8h_a3c16dc610ff30371be993d99139d90e5}{deallocate\-\_\-population} (\hyperlink{structproblem}{problem} $\ast$p\-\_\-prob)
+\begin{DoxyCompactList}\small\item\em Free the memomy allocated to a population. \end{DoxyCompactList}\item 
+void \hyperlink{cell_8h_a3bfbe7ddc8923cf3e35230a7fec1af57}{deallocate\-\_\-problem} (\hyperlink{structproblem}{problem} $\ast$p\-\_\-prob)
+\begin{DoxyCompactList}\small\item\em Free the memomy allocated to a problem. \end{DoxyCompactList}\item 
+void \hyperlink{cell_8h_a56e6216bdd71d675126d7a972257ba78}{print\-\_\-pop} (\hyperlink{structproblem}{problem} $\ast$p\-\_\-prob)
+\begin{DoxyCompactList}\small\item\em print the whole population \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definition of the problem, the population and cells. \begin{DoxyAuthor}{Author}
+Maxence Faldor
+\end{DoxyAuthor}
+Defines different structures\-:
+\begin{DoxyItemize}
+\item a structure coordinate
+\item a structure cell
+\item a structure population which is a linked list of cells
+\item a structure problem containing all the parameters of the conway problem
+\end{DoxyItemize}
+
+Contains useful functions\-:
+\begin{DoxyItemize}
+\item a function to return the reciprocal index of two neighbouring cells
+\item a function to create a empty population
+\item a function to add a cell to a population
+\item a function to remove a cell from a population
+\item a function to know if two cells are neighbor considering their coordinates
+\item a function to return the coordinate of the neighbor of index i of a cell
+\item a function to get the adress of a cell in the population
+\item a function to get the population's next generation
+\item a function to deallocate a population
+\item a function to deallocate a problem
+\item a function to print a population 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\hypertarget{cell_8h_a779fb98cabdc5e91d776de8c195d8169}{\index{cell.\-h@{cell.\-h}!add\-\_\-cell@{add\-\_\-cell}}
+\index{add\-\_\-cell@{add\-\_\-cell}!cell.h@{cell.\-h}}
+\subsubsection[{add\-\_\-cell}]{\setlength{\rightskip}{0pt plus 5cm}void add\-\_\-cell (
+\begin{DoxyParamCaption}
+\item[{{\bf problem} $\ast$}]{p\-\_\-prob, }
+\item[{{\bf coordinate}}]{coord, }
+\item[{{\bf status}}]{stat}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_a779fb98cabdc5e91d776de8c195d8169}
+
+
+Add a cell to a population. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-prob} & a pointer to the problem. \\
+\hline
+{\em coord} & coordinates of the new cell. \\
+\hline
+{\em stat} & status of the new cell.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+A new cell is added to a population with its parameters. Neighbors of each cell are updated. 
+\end{DoxyPostcond}
+\hypertarget{cell_8h_a3c16dc610ff30371be993d99139d90e5}{\index{cell.\-h@{cell.\-h}!deallocate\-\_\-population@{deallocate\-\_\-population}}
+\index{deallocate\-\_\-population@{deallocate\-\_\-population}!cell.h@{cell.\-h}}
+\subsubsection[{deallocate\-\_\-population}]{\setlength{\rightskip}{0pt plus 5cm}void deallocate\-\_\-population (
+\begin{DoxyParamCaption}
+\item[{{\bf problem} $\ast$}]{p\-\_\-prob}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_a3c16dc610ff30371be993d99139d90e5}
+
+
+Free the memomy allocated to a population. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-prob} & a pointer to the problem.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Each cell composing the population are freed. The population is deallocated. 
+\end{DoxyPostcond}
+\hypertarget{cell_8h_a3bfbe7ddc8923cf3e35230a7fec1af57}{\index{cell.\-h@{cell.\-h}!deallocate\-\_\-problem@{deallocate\-\_\-problem}}
+\index{deallocate\-\_\-problem@{deallocate\-\_\-problem}!cell.h@{cell.\-h}}
+\subsubsection[{deallocate\-\_\-problem}]{\setlength{\rightskip}{0pt plus 5cm}void deallocate\-\_\-problem (
+\begin{DoxyParamCaption}
+\item[{{\bf problem} $\ast$}]{p\-\_\-prob}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_a3bfbe7ddc8923cf3e35230a7fec1af57}
+
+
+Free the memomy allocated to a problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-prob} & a pointer to the problem.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+All the memory allocated is freed. 
+\end{DoxyPostcond}
+\hypertarget{cell_8h_aa8682a66e00f6057274d888f4f88731b}{\index{cell.\-h@{cell.\-h}!find\-\_\-cell@{find\-\_\-cell}}
+\index{find\-\_\-cell@{find\-\_\-cell}!cell.h@{cell.\-h}}
+\subsubsection[{find\-\_\-cell}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cell}$\ast$ find\-\_\-cell (
+\begin{DoxyParamCaption}
+\item[{{\bf problem} $\ast$}]{p\-\_\-prob, }
+\item[{{\bf coordinate}}]{coord}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_aa8682a66e00f6057274d888f4f88731b}
+
+
+Find a cell in a population. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-prob} & a pointer to the problem. \\
+\hline
+{\em coord} & coordinates of the first cell.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the cell of coordinates coord if it belongs to the population. N\-U\-L\-L otherwise. 
+\end{DoxyReturn}
+\hypertarget{cell_8h_a9b2a7ea0c749e21682f08bf8099b73b7}{\index{cell.\-h@{cell.\-h}!iindex@{iindex}}
+\index{iindex@{iindex}!cell.h@{cell.\-h}}
+\subsubsection[{iindex}]{\setlength{\rightskip}{0pt plus 5cm}int iindex (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_a9b2a7ea0c749e21682f08bf8099b73b7}
+
+
+Return the reciprocal index of two neighbouring cells. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the neighbouring cell.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reciprocal index of two neighbouring cells. 
+\end{DoxyReturn}
+\hypertarget{cell_8h_aaa4216c60537c08296db2da595b47b2d}{\index{cell.\-h@{cell.\-h}!is\-\_\-neighbor@{is\-\_\-neighbor}}
+\index{is\-\_\-neighbor@{is\-\_\-neighbor}!cell.h@{cell.\-h}}
+\subsubsection[{is\-\_\-neighbor}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-neighbor (
+\begin{DoxyParamCaption}
+\item[{{\bf problem} $\ast$}]{p\-\_\-prob, }
+\item[{{\bf coordinate}}]{coord1, }
+\item[{{\bf coordinate}}]{coord2}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_aaa4216c60537c08296db2da595b47b2d}
+
+
+Enables to know if two cells are neighbor considering their coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-prob} & a pointer to the problem. \\
+\hline
+{\em coord1} & coordinates of the first cell. \\
+\hline
+{\em coord2} & coordinates of the second cell.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the cells are neighbouring. False otherwise. 
+\end{DoxyReturn}
+\hypertarget{cell_8h_a736e96dec4f5a5abf45dd11b5789c202}{\index{cell.\-h@{cell.\-h}!neighbor@{neighbor}}
+\index{neighbor@{neighbor}!cell.h@{cell.\-h}}
+\subsubsection[{neighbor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf coordinate} neighbor (
+\begin{DoxyParamCaption}
+\item[{{\bf problem} $\ast$}]{p\-\_\-prob, }
+\item[{{\bf cell} $\ast$}]{p\-\_\-cell, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_a736e96dec4f5a5abf45dd11b5789c202}
+
+
+Enables to know the coordinates of the neighbor of index i of a cell considering the edges of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-prob} & a pointer to the problem. \\
+\hline
+{\em my\-\_\-cell} & a cell representing the reference. \\
+\hline
+{\em index} & the index of the considered neighbor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are neighbouring cells. False otherwise. 
+\end{DoxyReturn}
+\hypertarget{cell_8h_a0e6598e1dcfe64bd21d1fd4c3873eba2}{\index{cell.\-h@{cell.\-h}!next\-\_\-generation@{next\-\_\-generation}}
+\index{next\-\_\-generation@{next\-\_\-generation}!cell.h@{cell.\-h}}
+\subsubsection[{next\-\_\-generation}]{\setlength{\rightskip}{0pt plus 5cm}void next\-\_\-generation (
+\begin{DoxyParamCaption}
+\item[{{\bf problem} $\ast$}]{p\-\_\-prob}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_a0e6598e1dcfe64bd21d1fd4c3873eba2}
+
+
+Update the population to the population's next generation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-prob} & a pointer to the problem.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+The population is changed according to the rules of the Conway's Game of Life. 
+\end{DoxyPostcond}
+\hypertarget{cell_8h_ad85e7100d3e86c427851f8b27e303aa5}{\index{cell.\-h@{cell.\-h}!nil@{nil}}
+\index{nil@{nil}!cell.h@{cell.\-h}}
+\subsubsection[{nil}]{\setlength{\rightskip}{0pt plus 5cm}{\bf population} nil (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_ad85e7100d3e86c427851f8b27e303aa5}
+
+
+Return an empty population. 
+
+\begin{DoxyReturn}{Returns}
+An empty population. 
+\end{DoxyReturn}
+\hypertarget{cell_8h_a56e6216bdd71d675126d7a972257ba78}{\index{cell.\-h@{cell.\-h}!print\-\_\-pop@{print\-\_\-pop}}
+\index{print\-\_\-pop@{print\-\_\-pop}!cell.h@{cell.\-h}}
+\subsubsection[{print\-\_\-pop}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-pop (
+\begin{DoxyParamCaption}
+\item[{{\bf problem} $\ast$}]{p\-\_\-prob}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_a56e6216bdd71d675126d7a972257ba78}
+
+
+print the whole population 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-prob} & a pointer to the problem.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Each cell composing the populaton is printed in the terminal. 
+\end{DoxyPostcond}
+\hypertarget{cell_8h_af601d4688b7489ae7753bd45f61e0b24}{\index{cell.\-h@{cell.\-h}!remove\-\_\-cell@{remove\-\_\-cell}}
+\index{remove\-\_\-cell@{remove\-\_\-cell}!cell.h@{cell.\-h}}
+\subsubsection[{remove\-\_\-cell}]{\setlength{\rightskip}{0pt plus 5cm}void remove\-\_\-cell (
+\begin{DoxyParamCaption}
+\item[{{\bf problem} $\ast$}]{p\-\_\-prob, }
+\item[{{\bf coordinate}}]{coord}
+\end{DoxyParamCaption}
+)}}\label{cell_8h_af601d4688b7489ae7753bd45f61e0b24}
+
+
+Remove a cell from a population. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-prob} & a pointer to the problem. \\
+\hline
+{\em coord} & coordinates of the cell.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+A cell is removed from a population. Neighbors of each cell are updated and memory is freed. 
+\end{DoxyPostcond}

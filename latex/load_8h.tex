@@ -1,0 +1,55 @@
+\hypertarget{load_8h}{\section{include/load.h File Reference}
+\label{load_8h}\index{include/load.\-h@{include/load.\-h}}
+}
+
+
+Enable to load an image.  
+
+
+{\ttfamily \#include \char`\"{}generate-\/image.\-h\char`\"{}}\\*
+Include dependency graph for load.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{load_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structproblem}{problem} $\ast$ \hyperlink{load_8h_a49966de5abd3597681b2a27a2430a11a}{load\-\_\-problem} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Load a problem from a .txt file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enable to load an image. \begin{DoxyAuthor}{Author}
+Maxence Faldor
+\end{DoxyAuthor}
+Composed of\-:
+\begin{DoxyItemize}
+\item a function to load a data file .txt representing the initial state of a problem. 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\hypertarget{load_8h_a49966de5abd3597681b2a27a2430a11a}{\index{load.\-h@{load.\-h}!load\-\_\-problem@{load\-\_\-problem}}
+\index{load\-\_\-problem@{load\-\_\-problem}!load.h@{load.\-h}}
+\subsubsection[{load\-\_\-problem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf problem}$\ast$ load\-\_\-problem (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{load_8h_a49966de5abd3597681b2a27a2430a11a}
+
+
+Load a problem from a .txt file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & An int given in the terminal \\
+\hline
+{\em argv} & A char$\ast$$\ast$ given in the terminal\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a problem with a population and parameters loaded from a .txt file. 
+\end{DoxyReturn}

@@ -1,0 +1,87 @@
+\hypertarget{generate-image_8h}{\section{include/generate-\/image.h File Reference}
+\label{generate-image_8h}\index{include/generate-\/image.\-h@{include/generate-\/image.\-h}}
+}
+
+
+Enable to generate an image.  
+
+
+{\ttfamily \#include \char`\"{}cell.\-h\char`\"{}}\\*
+Include dependency graph for generate-\/image.h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{generate-image_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{generate-image_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{generate-image_8h_ad873e58c1613bbcff5a45a54830b6953}{generate\-\_\-image} (\hyperlink{structproblem}{problem} $\ast$p\-\_\-prob, int number\-\_\-of\-\_\-steps, int pas)
+\begin{DoxyCompactList}\small\item\em Generate the image of the problem. \end{DoxyCompactList}\item 
+int \hyperlink{generate-image_8h_ac3afc5bb6983d9c71d005805520d9dfc}{number\-\_\-figures} (int number)
+\begin{DoxyCompactList}\small\item\em Gives the number of figures in the number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enable to generate an image. \begin{DoxyAuthor}{Author}
+Maxence Faldor
+\end{DoxyAuthor}
+Composed of\-:
+\begin{DoxyItemize}
+\item a function to generate an image.
+\item a function to get the number of figures in a number. 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\hypertarget{generate-image_8h_ad873e58c1613bbcff5a45a54830b6953}{\index{generate-\/image.\-h@{generate-\/image.\-h}!generate\-\_\-image@{generate\-\_\-image}}
+\index{generate\-\_\-image@{generate\-\_\-image}!generate-image.h@{generate-\/image.\-h}}
+\subsubsection[{generate\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}void generate\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{{\bf problem} $\ast$}]{p\-\_\-prob, }
+\item[{int}]{number\-\_\-of\-\_\-steps, }
+\item[{int}]{pas}
+\end{DoxyParamCaption}
+)}}\label{generate-image_8h_ad873e58c1613bbcff5a45a54830b6953}
+
+
+Generate the image of the problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-prob} & a pointer to the problem. \\
+\hline
+{\em number\-\_\-of\-\_\-steps} & number of steps of the problem. \\
+\hline
+{\em pas} & step of the problem.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Generate an image in the ppm format representing the problem. 
+\end{DoxyPostcond}
+\hypertarget{generate-image_8h_ac3afc5bb6983d9c71d005805520d9dfc}{\index{generate-\/image.\-h@{generate-\/image.\-h}!number\-\_\-figures@{number\-\_\-figures}}
+\index{number\-\_\-figures@{number\-\_\-figures}!generate-image.h@{generate-\/image.\-h}}
+\subsubsection[{number\-\_\-figures}]{\setlength{\rightskip}{0pt plus 5cm}int number\-\_\-figures (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}}\label{generate-image_8h_ac3afc5bb6983d9c71d005805520d9dfc}
+
+
+Gives the number of figures in the number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & A number of int type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of figures in number. 
+\end{DoxyReturn}
